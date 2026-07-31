@@ -167,7 +167,7 @@ const projectDatabase = {
         image: "assets/images/openings/keystore_1.jpg",
         desc: "Xây dựng trọn gói kế hoạch tiếp thị khai trương cửa hàng mới tại khu chung cư. Triển khai bộ ấn phẩm POSM đồng bộ, chuẩn bị 830+ suất quà tặng 'Mua Vui Mở Hàng', thu hút lượng khách ghé thăm trong ngày đầu.",
         scope: "Cửa hàng mới — khu chung cư",
-        kpi: "Phát thành công 790/830 quà tặng (Tỷ lệ 95.2%), Tỷ lệ Chi phí/Doanh thu đạt 5.7%",
+        kpi: "Phát thành công 790/830 quà tặng (Tỷ lệ 95,2%), Tỷ lệ Chi phí/Doanh thu đạt 5,7%",
         vendor: "Nhà cung cấp FMCG đồng hành"
     },
     p2: {
@@ -176,7 +176,7 @@ const projectDatabase = {
         image: "assets/images/openings/ribbon_cut.jpg",
         desc: "Vận hành nghi thức cắt băng khai trương, đón tiếp khách mời VIP và điều phối nhân sự sự kiện. Đảm bảo toàn bộ không gian cửa hàng trang trí ấn tượng, tạo ấn tượng mạnh mẽ cho cư dân khu vực.",
         scope: "Khu vực Cửa hàng Khai trương",
-        kpi: "Thu hút 1,200+ lượt khách ghé mua sắm ngay trong 3 ngày đầu",
+        kpi: "Hơn 1.200 lượt khách đến mua sắm trong 3 ngày đầu",
         vendor: "Ban lãnh đạo & Đối tác bất động sản"
     },
     p3: {
@@ -184,16 +184,16 @@ const projectDatabase = {
         category: "Ấn Phẩm POSM & Quảng Cáo In Ấn",
         image: "assets/images/posm/poster_a4_1.jpg",
         desc: "Thiết kế POSM A4 thông tin thể lệ chương trình khuyến mãi, đặt tại quầy thu ngân làm công cụ tư vấn trực tiếp cho nhân viên khi thanh toán.",
-        scope: "Toàn bộ chuỗi bách hóa",
+        scope: "Toàn bộ chuỗi Co.opSmile",
         kpi: "100% Ấn phẩm bàn giao trước deadline 2 ngày, không lỗi thông tin giá",
         vendor: "Nhãn hàng FMCG xuất hiện trang bìa & trang nhất"
     },
     p4: {
-        title: "Poster Kỳ Cẩm Nang Mua Sắm 53x80cm",
+        title: "Poster Kỳ Cẩm Nang Mua Sắm 53×80cm",
         category: "Ấn Phẩm POSM & Key Visual",
         image: "assets/images/posm/poster_a4_2.jpg",
-        desc: "Thiết kế poster 53x80cm theo từng kỳ cẩm nang mua sắm với danh mục hơn 20 sản phẩm giảm giá, trưng bày dán kính trước cửa hàng.",
-        scope: "Chuỗi cửa hàng tiện lợi",
+        desc: "Thiết kế poster 53×80cm theo từng kỳ cẩm nang mua sắm với danh mục hơn 20 sản phẩm giảm giá, trưng bày dán kính trước cửa hàng.",
+        scope: "Chuỗi cửa hàng tiện lợi Cheers",
         kpi: "Góp phần tăng 18% lượng khách ghé thăm ngẫu hứng (Walk-in traffic)",
         vendor: "Bộ phận Marketing nội bộ"
     },
@@ -202,7 +202,7 @@ const projectDatabase = {
         category: "Truyền Thông Chiến Dịch Nhãn Hàng & CRM",
         image: "assets/images/social/dutch_lady.jpg",
         desc: "Thiết kế banner và truyền thông chương trình Mua Sữa Tích Điểm Đổi Quà của nhãn Dutch Lady triển khai tại chuỗi, trên Fanpage và nhóm Zalo.",
-        scope: "Hội viên Khách Hàng Thân Thiết (KHTV)",
+        scope: "Khách hàng thành viên (KHTV)",
         kpi: "Tăng 35% doanh số ngành hàng Sữa trong tháng triển khai",
         vendor: "FrieslandCampina Vietnam (Dutch Lady)"
     },
@@ -211,16 +211,16 @@ const projectDatabase = {
         category: "Social Media Campaign & Digital Banner",
         image: "assets/images/social/dua_1tang1.jpg",
         desc: "Thiết kế banner truyền thông chiến dịch Mua 1 Tặng 1 Nước Dừa Tươi nhân dịp nắng nóng đỉnh điểm mùa hè. Chạy truyền thông trên Facebook Fanpage và nhóm Zalo Cư Dân.",
-        scope: "Hệ thống cửa hàng tiện lợi",
-        kpi: "Cháy hàng 2,500+ đơn vị sản phẩm nước dừa chỉ sau 48h",
+        scope: "Hệ thống cửa hàng tiện lợi Cheers",
+        kpi: "Đẩy mạnh sản lượng bán nước dừa tươi trong cao điểm nắng nóng",
         vendor: "Nhà Cung Cấp Nông Sản Sạch"
     },
     p7: {
         title: "Chương Trình X2 Tem Tích Lũy Đổi Quà",
         category: "Loyalty Program & CRM Boost",
         image: "assets/images/social/x2_tem.jpg",
-        desc: "Chiến dịch kích cầu mua sắm nhân dịp sinh nhật chuỗi. Nhân đôi điểm tem tích lũy cho khách hàng mua sắm hóa đơn từ 50k.",
-        scope: "Khách hàng mua sắm tại chuỗi",
+        desc: "Chiến dịch kích cầu mua sắm nhân dịp sinh nhật chuỗi Cheers. Nhân đôi điểm tem tích lũy cho khách hàng mua sắm hóa đơn từ 50k.",
+        scope: "Khách hàng mua sắm tại chuỗi Cheers",
         kpi: "Tăng 25% giá trị hóa đơn bình thường (Basket Size)",
         vendor: "Đội ngũ Loyalty nội bộ"
     },
@@ -238,7 +238,7 @@ const projectDatabase = {
         category: "Ấn Phẩm POSM & Quảng Cáo In Ấn",
         image: "assets/images/posm/cnms_01.jpg",
         desc: "Cuốn A4 phát hành theo từng kỳ khuyến mãi: trang bìa chủ đề, các trang danh mục sản phẩm giảm giá và trang thông tin đặt hàng giao tận nơi. Thiết kế và chuẩn hóa toàn bộ theo tiêu chuẩn thương hiệu.",
-        scope: "Toàn bộ chuỗi bách hóa",
+        scope: "Toàn bộ chuỗi Co.opSmile",
         kpi: "5 trang/kỳ, bàn giao đúng hạn trước ngày khởi động chương trình",
         vendor: "Bộ phận Marketing nội bộ"
     },
@@ -247,7 +247,7 @@ const projectDatabase = {
         category: "Social Media & Promo Communication",
         image: "assets/images/social/online_promo.jpg",
         desc: "Các đối tác như ShopeeFood, GrabMart... có chương trình ưu đãi hằng tháng dành riêng cho chuỗi. Tôi thiết kế bài đăng và triển khai truyền thông đến khách hàng qua Fanpage và nhóm Zalo cư dân.",
-        scope: "Fanpage & nhóm Zalo của chuỗi",
+        scope: "Fanpage Cheers, Co.opSmile & nhóm Zalo cư dân",
         kpi: "Bài truyền thông phủ đều mỗi kỳ ưu đãi hằng tháng",
         vendor: "Phối hợp bộ phận phụ trách nền tảng giao hàng"
     }

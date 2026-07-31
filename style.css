@@ -2767,3 +2767,21 @@ button:focus-visible {
     .cs-split > .cs-figure img,
     .cs-split > .cs-figure-tall img { max-height: 52vh; }
 }
+
+/* ── Nút tải CV trong modal ──────────────────────────────── */
+.cv-actions-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.cv-actions-btn .btn {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .cv-actions-btn { width: 100%; }
+    .cv-actions-btn .btn { flex: 1 1 100%; justify-content: center; }
+}

@@ -1,7 +1,7 @@
 # Portfolio Marketing — Lê Ngọc Bảo Nhi
 
-Trang portfolio tĩnh, không cần build, không phụ thuộc thư viện ngoài
-ngoài Google Fonts và Font Awesome tải qua CDN.
+Trang portfolio tĩnh, không cần build. Chỉ phụ thuộc Google Fonts và
+Font Awesome tải qua CDN.
 
 ## Cấu trúc
 
@@ -9,6 +9,7 @@ ngoài Google Fonts và Font Awesome tải qua CDN.
 - `style.css` — bảng màu, bố cục, responsive, hai chế độ sáng/tối
 - `app.js` — điều hướng, tab dashboard, bộ lọc dự án, lightbox
 - `assets/images/` — ảnh chiến dịch, POSM, sự kiện (đã nén cho web)
+- `assets/*.pdf` — file CV tải về
 - `.nojekyll` — tắt Jekyll của GitHub Pages
 
 ## Chạy thử tại máy
@@ -17,9 +18,7 @@ ngoài Google Fonts và Font Awesome tải qua CDN.
 python3 -m http.server 8000
 ```
 
-Rồi mở http://localhost:8000
-
 ## Xuất bản
 
-Đẩy toàn bộ thư mục lên nhánh `main` của một repo GitHub, vào
-**Settings → Pages**, chọn Source = *Deploy from a branch*, branch `main`, thư mục `/ (root)`.
+Đẩy toàn bộ thư mục lên nhánh `main`, vào **Settings → Pages**,
+chọn Source = *Deploy from a branch*, branch `main`, thư mục `/ (root)`.
