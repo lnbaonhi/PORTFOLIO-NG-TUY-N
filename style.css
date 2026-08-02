@@ -2785,3 +2785,39 @@ button:focus-visible {
     .cv-actions-btn { width: 100%; }
     .cv-actions-btn .btn { flex: 1 1 100%; justify-content: center; }
 }
+
+/* ── Nút chuyển ngôn ngữ VI / EN ─────────────────────────── */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    padding: 0 12px;
+    margin-right: 8px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-strong);
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    box-shadow: var(--shadow-lift);
+    transition: border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.lang-toggle:hover {
+    border-color: var(--indigo);
+    color: var(--indigo);
+    transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lang-toggle:hover { transform: none; }
+}
+
+@media (max-width: 768px) {
+    .lang-toggle { min-width: 36px; height: 36px; padding: 0 9px; font-size: 0.74rem; margin-right: 6px; }
+}

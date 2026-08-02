@@ -46,6 +46,7 @@
             </nav>
 
             <div class="nav-actions">
+                <a href="en.html" class="lang-toggle" title="View in English" aria-label="View in English">EN</a>
                 <button class="theme-toggle" id="theme-toggle" title="Chuyển chế độ Sáng/Tối" aria-label="Chuyển chế độ Sáng/Tối">
                     <i class="fa-solid fa-sun"></i>
                 </button>
@@ -292,21 +293,15 @@
                 <div class="section-header">
                     <span class="section-subtitle">TẬP TRUNG CHƯƠNG TRÌNH LỚN & KEY EVENTS</span>
                     <h2 class="section-title">Dashboard KPI & Số Liệu Ấn Tượng</h2>
-                    <p class="section-desc">Tổng hợp số liệu doanh số, quà tặng và đánh giá KPI từ các chiến dịch quy mô lớn nhất của hệ thống (Tết, Sinh nhật chuỗi, Khai trương key event).</p>
+                    <p class="section-desc">Kết quả đánh giá hiệu quả công việc theo quý và chương trình sinh nhật thường niên của chuỗi. Các chiến dịch lớn được phân tích chi tiết ở mục Case Study.</p>
                 </div>
 
                 <!-- Tabs Selector -->
                 <div class="dashboard-tabs">
-                    <button class="dash-tab active" data-tab="tab-tet">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> CTKM Tết Vạn Điều May
-                    </button>
-                    <button class="dash-tab" data-tab="tab-birthday">
+                    <button class="dash-tab" data-tab="tab-birthday" id="tab-btn-birthday">
                         <i class="fa-solid fa-cake-candles"></i> Sinh Nhật Chuỗi Thường Niên
                     </button>
-                    <button class="dash-tab" data-tab="tab-opening">
-                        <i class="fa-solid fa-store"></i> Khai Trương Cửa Hàng Mới
-                    </button>
-                    <button class="dash-tab" data-tab="tab-kpi">
+                    <button class="dash-tab active" data-tab="tab-kpi">
                         <i class="fa-solid fa-award"></i> Đánh Giá KPI Loại A (Xuất Sắc)
                     </button>
                 </div>
@@ -315,42 +310,6 @@
                 <div class="dashboard-content">
 
                     <!-- TAB 1: TET CAMPAIGN (IMPENSIVE METRICS) -->
-                    <div class="dash-panel active" id="tab-tet">
-                        <div class="panel-grid">
-                            <div class="panel-text">
-                                <span class="tag-badge text-gold">Chiến Dịch Lớn Nhất Năm</span>
-                                <h3>“Quà Trao Tay Tết Vạn Điều May”</h3>
-                                <p class="lead-text">Chương trình khuyến mãi Tết cho toàn chuỗi Cheers, áp dụng hình thức khuyến mãi dạng may rủi bằng thẻ cào: hóa đơn từ 79.000đ nhận 01 thẻ cào trúng thưởng ngay tại quầy. Thiết kế POSM đồng bộ trưng bày tại cửa hàng, kèm ấn phẩm A4 thể lệ đặt tại quầy thu ngân cho nhân viên tư vấn.</p>
-                                
-                                <div class="metric-highlights">
-                                    <div class="metric-box">
-                                        <div class="metric-val text-gold">2,09 tỷ</div>
-                                        <div class="metric-lbl">Doanh Thu 16 Ngày Triển Khai</div>
-                                    </div>
-                                    <div class="metric-box">
-                                        <div class="metric-val text-emerald">2.488</div>
-                                        <div class="metric-lbl">Quà Trao Tay Trong 16 Ngày</div>
-                                    </div>
-                                    <div class="metric-box">
-                                        <div class="metric-val text-indigo">100%</div>
-                                        <div class="metric-lbl">Phủ Bộ POSM Tết Trước Hạn 3 Ngày</div>
-                                    </div>
-                                    <div class="metric-box">
-                                        <div class="metric-val text-purple">10.569</div>
-                                        <div class="metric-lbl">Hóa Đơn Đạt Điều Kiện Trong 16 Ngày</div>
-                                    </div>
-                                </div>
-                                <p class="sub-note"><i class="fa-solid fa-chart-line"></i> Đạt doanh số Tết cao nhất so với cùng kỳ nhờ đẩy mạnh truyền thông đa kênh và thông tin thể lệ khuyến mãi rõ ràng ngay tại quầy thu ngân.</p>
-                            </div>
-
-                            <div class="panel-image">
-                                <img src="assets/images/posm/poster_a4_1.jpg" alt="POSM A4 thể lệ chương trình Tết" class="dashboard-img">
-                                <div class="img-caption"><i class="fa-solid fa-file-image"></i> POSM A4 thể lệ chương trình Tết, đặt tại quầy thu ngân toàn chuỗi</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- TAB 2: BIRTHDAY CAMPAIGN (BIG NUMBERS) -->
                     <div class="dash-panel" id="tab-birthday">
                         <div class="panel-grid">
                             <div class="panel-text">
@@ -387,43 +346,7 @@
                     </div>
 
                     <!-- TAB 3: NEW STORE OPENING EVENT -->
-                    <div class="dash-panel" id="tab-opening">
-                        <div class="panel-grid">
-                            <div class="panel-text">
-                                <span class="tag-badge text-emerald">Grand Opening</span>
-                                <h3>Khai Trương Cửa Hàng Mới Khu Chung Cư</h3>
-                                <p class="lead-text">Tổ chức tuần lễ khai trương cho hai cửa hàng mới. Điều phối nhân sự, sản xuất bộ POSM khai trương và triển khai chương trình quà tặng “Mua Vui Mở Hàng” thúc đẩy doanh số.</p>
-                                
-                                <div class="metric-highlights">
-                                    <div class="metric-box">
-                                        <div class="metric-val text-emerald">830</div>
-                                        <div class="metric-lbl">Suất Quà Tặng Chuẩn Bị Khai Trương</div>
-                                    </div>
-                                    <div class="metric-box">
-                                        <div class="metric-val text-indigo">790</div>
-                                        <div class="metric-lbl">Quà Phát Trực Tiếp Cho Khách Hàng</div>
-                                    </div>
-                                    <div class="metric-box">
-                                        <div class="metric-val text-gold">95,2%</div>
-                                        <div class="metric-lbl">Tỷ Lệ Chuyển Đổi Quà Tặng</div>
-                                    </div>
-                                    <div class="metric-box">
-                                        <div class="metric-val text-purple">5,7%</div>
-                                        <div class="metric-lbl">Tỷ Lệ Chi Phí/Doanh Thu (Tối Ưu Ngân Sách)</div>
-                                    </div>
-                                </div>
-                                <p class="sub-note"><i class="fa-solid fa-circle-check"></i> Hơn 1.200 lượt khách đến mua sắm ngay trong 3 ngày đầu khai trương.</p>
-                            </div>
-
-                            <div class="panel-image">
-                                <img src="assets/images/openings/keystore_1.jpg" alt="Khai trương cửa hàng mới" class="dashboard-img">
-                                <div class="img-caption"><i class="fa-solid fa-camera"></i> Hình ảnh thực tế trong tuần lễ khai trương cửa hàng mới</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- TAB 4: KPI EVALUATION RATING A -->
-                    <div class="dash-panel" id="tab-kpi">
+                    <div class="dash-panel active" id="tab-kpi">
                         <div class="panel-grid">
                             <div class="panel-text">
                                 <span class="tag-badge text-indigo">Đánh Giá Loại A (Xuất Sắc) Ban Giám Đốc</span>
@@ -500,7 +423,7 @@
                                 <dd>01/02 – 16/02 <span class="cs-fact-sub">16 ngày</span></dd>
                             </div>
                             <div class="cs-fact">
-                                <dt>Phạm vi</dt>
+                                <dt>Quy mô điều phối</dt>
                                 <dd>20 cửa hàng <span class="cs-fact-sub">toàn chuỗi Cheers</span></dd>
                             </div>
                             <div class="cs-fact">
@@ -616,6 +539,7 @@
                             <div class="cs-finding-text">
                                 <p><strong>10.569 hóa đơn đạt điều kiện chỉ trong 16 ngày</strong> — mốc hóa đơn từ 79.000đ phát huy đúng vai trò gia tăng giá trị giỏ hàng, mang về 2,087 tỷ đồng doanh thu với chi phí chương trình chỉ chiếm 1,15%.</p>
                                 <p>Tỷ lệ phát quà đồng đều 84–92% ở cả ba nhóm quà cho thấy cơ cấu giải thưởng bám sát thị hiếu khách hàng dịp Tết; <em>12/20 cửa hàng phát hết 100% định mức được giao</em>.</p>
+                                <p><strong>Điểm chưa tối ưu:</strong> lượng quà phân bổ chưa bám sát sức mua thực tế của từng cụm điểm bán — có cửa hàng phát hết sớm, có nơi còn tồn. Đây là cơ sở cho các đề xuất ở phần sau.</p>
                             </div>
                         </div>
                     </div>
@@ -678,7 +602,7 @@
                                 <dd>28/06 – 05/07 <span class="cs-fact-sub">7 ngày đầu khai trương</span></dd>
                             </div>
                             <div class="cs-fact">
-                                <dt>Phạm vi</dt>
+                                <dt>Quy mô điều phối</dt>
                                 <dd>1 cửa hàng mới <span class="cs-fact-sub">tại khu chung cư</span></dd>
                             </div>
                             <div class="cs-fact">
@@ -748,6 +672,7 @@
                             <div class="cs-finding-text">
                                 <p><strong>Quà mở hàng cho hóa đơn từ 99.000đ và quà mở thẻ thành viên đều đạt 100% định mức.</strong> Túi quà cho hóa đơn từ 200.000đ đạt 92% — mức quà tặng chủ lực trực tiếp gia tăng giá trị giỏ hàng của nhóm khách mua lần đầu.</p>
                                 <p>Kết quả xác nhận <em>cơ chế trao thưởng ngay tại quầy là lựa chọn phù hợp cho giai đoạn khai trương</em>, khi khách hàng mới cần một trải nghiệm tích cực tức thì để quay lại trong những tuần kế tiếp.</p>
+                                <p><strong>Điểm chưa tối ưu:</strong> cơ chế đòi khách tích lũy nhiều hóa đơn chưa phù hợp với giai đoạn mở điểm, khi khách chưa hình thành thói quen quay lại. Đây là cơ sở cho đề xuất điều chỉnh ở phần sau.</p>
                             </div>
                         </div>
                     </div>
@@ -889,6 +814,7 @@
                             <div class="cs-finding-text">
                                 <p><strong>Cơ chế trúng ngay đạt tỷ lệ tham gia 39,6% toàn chuỗi — cao hơn 10 lần cơ chế đối chứng triển khai trước đó — và đạt tới 67,6% tại cửa hàng dẫn đầu.</strong> Mức chênh lệch nhất quán ở cả ba cụm cửa hàng cho thấy thời điểm trả thưởng là biến số quyết định mức độ tham gia.</p>
                                 <p>Phát hiện thứ hai: mức độ phù hợp giữa quà tặng và tệp khách quyết định nhóm nào tham gia. Ở cơ chế quay số nhận vé xem phim, cụm cửa hàng khu sinh viên có lượt tham gia tích cực hơn hẳn các điểm bán khác do phần quà đúng sở thích của nhóm khách trẻ — <em>cơ sở để cá nhân hóa cơ cấu quà theo từng cụm cửa hàng trong các kỳ chương trình tiếp theo.</em></p>
+                                <p><strong>Điểm chưa tối ưu:</strong> một cơ cấu quà duy nhất áp cho toàn chuỗi khiến nhóm khách không thuộc tệp mục tiêu gần như bỏ qua chương trình. Đây là cơ sở cho các đề xuất ở phần sau.</p>
                             </div>
                         </div>
                     </div>
@@ -918,6 +844,136 @@
                             <li><strong>So sánh có kiểm soát:</strong> đặt hai chiến dịch cạnh nhau theo từng cụm cửa hàng thay vì so số tổng — cách làm này áp dụng được ngay khi cần so sánh hiệu quả của cùng một chương trình trên nhiều nền tảng khác nhau.</li>
                             <li><strong>Tách biến số:</strong> phân biệt được đâu là tác động của cơ chế, đâu là tác động của quà — nền tảng của việc thiết kế chương trình tiếp theo có chủ đích thay vì lặp lại theo quán tính.</li>
                             <li><strong>Đánh giá cơ chế trên nhiều mặt:</strong> khi so sánh hai cơ chế, ngoài tỷ lệ khách tham gia còn xét cả chi phí và công sức vận hành — ví dụ trả thưởng bằng e-voucher giúp cửa hàng không phải trưng bày, lưu kho hay kiểm đếm quà vật lý.</li>
+                        </ul>
+                    </aside>
+
+                </article>
+
+                <!-- ═══════════ CASE STUDY 04: GAMIFICATION ═══════════ -->
+                <article class="cs-article glass-card" id="case-gamification">
+
+                    <header class="cs-head">
+                        <div class="cs-head-text">
+                            <span class="cs-eyebrow"><i class="fa-solid fa-gamepad"></i> Case Study 04 · Gamification &amp; quản lý nhà cung cấp</span>
+                            <h3 class="cs-title">“Đại Tiệc Ăn Kem Uống Sữa”</h3>
+                            <p class="cs-standfirst">Chiến dịch đưa trò chơi trực tuyến vào điểm bán trên toàn chuỗi Co.opSmile: khách mua đúng ngành hàng nhận mã, quét vào web game để quay thưởng. Tôi chủ động tìm và ký hợp đồng với nhà cung cấp nền tảng, rồi theo dõi số liệu tới từng cửa hàng.</p>
+                        </div>
+                        <dl class="cs-facts">
+                            <div class="cs-fact">
+                                <dt>Thời gian</dt>
+                                <dd>15/05 – 28/05 <span class="cs-fact-sub">14 ngày</span></dd>
+                            </div>
+                            <div class="cs-fact">
+                                <dt>Quy mô điều phối</dt>
+                                <dd>133 cửa hàng <span class="cs-fact-sub">toàn chuỗi Co.opSmile</span></dd>
+                            </div>
+                            <div class="cs-fact">
+                                <dt>Vai trò</dt>
+                                <dd>Vận hành <span class="cs-fact-sub">chọn &amp; ký nhà cung cấp · triển khai · báo cáo</span></dd>
+                            </div>
+                        </dl>
+                    </header>
+
+                    <div class="cs-block cs-split">
+                        <figure class="cs-figure cs-figure-tall">
+                            <img src="assets/images/gamification/game_mobile.jpg" alt="Giao diện game trên điện thoại: form nhập mã dự thưởng và nút lắc để quay" loading="lazy" width="1170" height="2532">
+                            <figcaption><i class="fa-solid fa-mobile-screen"></i> Giao diện trên điện thoại — khách nhập mã in trên hóa đơn rồi lắc máy để quay thưởng.</figcaption>
+                        </figure>
+                        <div class="cs-split-text">
+                        <h4 class="cs-h4"><span class="cs-h4-num">01</span> Cơ chế chương trình</h4>
+                        <p class="cs-body">Khách mua sản phẩm thuộc ngành hàng kem &amp; sữa với hóa đơn <strong>từ 59.000đ</strong> nhận 01 mã dự thưởng in kèm hóa đơn; hóa đơn từ 118.000đ nhận 02 mã. Mã được nhập trên web game để tham gia quay thưởng ngay trên điện thoại, không cần cài ứng dụng.</p>
+                        <ul class="cs-mechanic">
+                            <li><span class="cs-chip cs-chip-gold">Vali kéo du lịch</span> 10 giải, hàng của nhãn tài trợ</li>
+                            <li><span class="cs-chip cs-chip-teal">Xe đạp trẻ em</span> 10 giải, nhắm nhóm khách gia đình</li>
+                            <li><span class="cs-chip cs-chip-plum">Pin sạc dự phòng</span> 10 giải, nhắm nhóm khách trẻ</li>
+                        </ul>
+                        <p class="cs-body"><strong>Toàn bộ 30 giải thưởng do nhãn hàng tài trợ</strong> — chương trình vận hành với chi phí quà tặng bằng 0 từ phía chuỗi.</p>
+                        </div>
+                    </div>
+
+                    <div class="cs-block">
+                        <h4 class="cs-h4"><span class="cs-h4-num">02</span> Nền tảng trò chơi</h4>
+                        <p class="cs-body">Chuỗi không có sẵn công cụ gamification. Tôi chủ động tìm kiếm, so sánh và chọn nhà cung cấp nền tảng bên ngoài, thương lượng giá cùng điều khoản hợp đồng, rồi lấy dữ liệu từ nền tảng về đối chiếu theo từng cửa hàng khi lập báo cáo.</p>
+                        <figure class="cs-figure">
+                            <img src="assets/images/gamification/game_desktop.jpg" alt="Giao diện web game trên máy tính với cơ cấu giải thưởng" loading="lazy" width="1920" height="862">
+                            <figcaption><i class="fa-solid fa-desktop"></i> Bản web hiển thị đầy đủ cơ cấu giải thưởng và thời gian áp dụng.</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="cs-block">
+                        <h4 class="cs-h4"><span class="cs-h4-num">03</span> Kết quả đo lường</h4>
+                        <div class="cs-kpi-row">
+                            <div class="cs-kpi">
+                                <span class="cs-kpi-val cs-val-gold">581,3 tr</span>
+                                <span class="cs-kpi-lbl">doanh thu ngành hàng trong 14 ngày</span>
+                            </div>
+                            <div class="cs-kpi">
+                                <span class="cs-kpi-val">9.852</span>
+                                <span class="cs-kpi-lbl">mã dự thưởng phát ra cho khách</span>
+                            </div>
+                            <div class="cs-kpi">
+                                <span class="cs-kpi-val cs-val-teal">33,2%</span>
+                                <span class="cs-kpi-lbl">tỷ lệ mã được kích hoạt vào game</span>
+                            </div>
+                            <div class="cs-kpi">
+                                <span class="cs-kpi-val cs-val-plum">0đ</span>
+                                <span class="cs-kpi-lbl">chi phí quà tặng từ phía chuỗi</span>
+                            </div>
+                        </div>
+                        <p class="cs-note"><i class="fa-solid fa-circle-check"></i> 3.272 lượt khách chủ động truy cập web game và để lại thông tin liên hệ — một kênh tương tác trực tiếp với khách hàng mà chương trình khuyến mãi tại quầy thông thường không tạo ra được.</p>
+                    </div>
+
+                    <div class="cs-block">
+                        <h4 class="cs-h4"><span class="cs-h4-num">04</span> Góc nhìn mới từ chiến dịch</h4>
+                        <div class="cs-finding">
+                            <div class="cs-finding-stat">
+                                <span class="cs-finding-num">0–95%</span>
+                                <span class="cs-finding-cap">khoảng dao động tỷ lệ tham gia giữa các cửa hàng</span>
+                            </div>
+                            <div class="cs-finding-text">
+                                <p><strong>Cùng một chương trình, cùng một cơ cấu giải, nhưng tỷ lệ tham gia giữa các cửa hàng trải dài từ 0% đến 95%.</strong> Nhóm dẫn đầu đạt 70–95%; nhóm cuối dưới 10%, một số điểm bán không có mã nào được kích hoạt.</p>
+                                <p>Mức chênh lệch này cho thấy <em>hiệu quả của một chương trình số hóa phụ thuộc vào khâu thực thi tại quầy nhiều hơn là vào bản thân cơ chế</em>. Nơi thu ngân chủ động giới thiệu, khách tham gia rất cao; nơi không giới thiệu, mã in ra rồi bị bỏ đi.</p>
+                            </div>
+                        </div>
+
+                        <h5 class="cs-h5">Hai rào cản nhận diện được</h5>
+                        <ul class="cs-issues">
+                            <li>
+                                <span class="cs-issue-tag">Thực thi</span>
+                                <p>Ở nhóm cửa hàng tỷ lệ thấp, thu ngân không giải thích quyền lợi và cách tham gia. Mã vẫn in ra đủ nhưng khách không biết dùng để làm gì.</p>
+                            </li>
+                            <li>
+                                <span class="cs-issue-tag">Thao tác</span>
+                                <p>Quy trình đòi khách thực hiện thêm một bước sau khi rời quầy: mở web, nhập mã. Khách lớn tuổi không quen thao tác, khách vội bỏ qua, và mã dễ bị thất lạc sau khi ra khỏi cửa hàng.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cs-block">
+                        <h4 class="cs-h4"><span class="cs-h4-num">05</span> Đề xuất cho kỳ kế tiếp</h4>
+                        <ol class="cs-recs">
+                            <li>
+                                <h6>Phân nhóm cửa hàng theo hiệu suất và giao chỉ tiêu riêng</h6>
+                                <p>Chia điểm bán thành ba nhóm theo tỷ lệ tham gia của kỳ trước (trên 80% / 50–80% / dưới 50%), đặt chỉ tiêu phù hợp cho từng nhóm và có chương trình hỗ trợ riêng cho nhóm thấp nhất.</p>
+                            </li>
+                            <li>
+                                <h6>Mở rộng điều kiện tham gia</h6>
+                                <p>Áp dụng theo tổng giá trị hóa đơn thay vì giới hạn một ngành hàng, hoặc kết hợp 2–3 ngành hàng chủ lực cùng lúc để tăng số khách đủ điều kiện.</p>
+                            </li>
+                            <li>
+                                <h6>Rút ngắn thao tác của khách</h6>
+                                <p>In sẵn mã QR dẫn thẳng vào game trên hóa đơn để khách quét ngay tại quầy, thay vì phải nhớ mã và tự mở web sau khi rời cửa hàng.</p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <aside class="cs-takeaway">
+                        <h4><i class="fa-solid fa-arrow-right-arrow-left"></i> Đúc kết trọng tâm</h4>
+                        <p>Đây là case duy nhất tôi làm việc với <strong>một nhà cung cấp công nghệ bên ngoài từ đầu đến cuối</strong>: tự tìm, tự thương lượng, rồi tự đối chiếu số liệu họ trả về:</p>
+                        <ul>
+                            <li><strong>Quản lý nhà cung cấp:</strong> chọn đối tác cho một hạng mục chuỗi chưa từng làm, thương lượng chi phí và điều khoản, chịu trách nhiệm tới kết quả cuối.</li>
+                            <li><strong>Đọc dữ liệu từ nền tảng số:</strong> lấy số liệu do hệ thống bên thứ ba trả về, đối chiếu xuống từng điểm bán để tìm nguyên nhân, thay vì chỉ báo cáo con số tổng.</li>
+                            <li><strong>Nhìn ra điểm nghẽn trong hành trình khách hàng:</strong> xác định được nút thắt nằm ở bước chuyển từ quầy thanh toán sang thao tác trên điện thoại — đúng chỗ mà các chương trình offline-to-online thường mất khách.</li>
                         </ul>
                     </aside>
 
