@@ -1,5 +1,5 @@
 /**
- * Le Ngoc Bao Nhi - Marketing Executive Portfolio Script
+ * Lê Ngọc Bảo Nhi - Marketing Executive Portfolio Script
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -162,94 +162,94 @@ function filterPortfolio() {
    ========================================================================== */
 const projectDatabase = {
     p1: {
-        title: "New Store Opening (Khu Chung Cư)",
+        title: "New Store Opening (Apartment Complex)",
         category: "New Store Opening",
         image: "assets/images/openings/keystore_1.jpg",
-        desc: "Xây dựng trọn gói kế hoạch tiếp thị khai trương cửa hàng mới in an apartment complex. Triển khai bộ ấn phẩm POSM đồng bộ, chuẩn bị 830+ suất quà tặng 'Mua Vui Mở Hàng', thu hút lượng khách ghé thăm trong ngày đầu.",
-        scope: "Cửa hàng mới — khu chung cư",
-        kpi: "Phát thành công 790/830 quà tặng (Rate 95,2%), Rate Chi phí/Doanh thu đạt 5,7%",
-        vendor: "Nhà cung cấp FMCG đồng hành"
+        desc: "End-to-end marketing plan for a new store opening in an apartment complex. Rolled out a coordinated POSM suite and prepared 830+ gifts under the 'Opening Day Cheer' programme to drive footfall from day one.",
+        scope: "New store — apartment complex",
+        kpi: "790 of 830 gifts redeemed (95.2%), cost-to-revenue ratio at 5.7%",
+        vendor: "Partnering FMCG suppliers"
     },
     p2: {
-        title: "Lễ Cắt Băng & Vận Hành New Store Opening",
+        title: "Ribbon-Cutting Ceremony & Opening Day Operations",
         category: "Event Management & Public Relations",
         image: "assets/images/openings/ribbon_cut.jpg",
-        desc: "Operations lead nghi thức cắt băng khai trương, đón tiếp khách mời VIP và điều phối nhân sự sự kiện. Đảm bảo toàn bộ không gian cửa hàng trang trí ấn tượng, tạo ấn tượng mạnh mẽ cho cư dân khu vực.",
-        scope: "Khu vực Cửa hàng Khai trương",
-        kpi: "Hơn 1.200 lượt khách đến mua sắm trong 3 ngày đầu",
-        vendor: "Ban lãnh đạo & Đối tác bất động sản"
+        desc: "Ran the ribbon-cutting ceremony, hosted VIP guests and coordinated event staffing, with the full store space dressed to make a strong first impression on local residents.",
+        scope: "Opening store and surrounding area",
+        kpi: "Over 1,200 shoppers in the first three days",
+        vendor: "Company leadership & property partner"
     },
     p3: {
         title: "A4 Promotion Mechanics Sheet",
-        category: "POSM & Quảng Cáo In Ấn",
+        category: "POSM & Print Advertising",
         image: "assets/images/posm/poster_a4_1.jpg",
-        desc: "Thiết kế POSM A4 thông tin thể lệ chương trình khuyến mãi, đặt tại quầy thu ngân làm công cụ tư vấn trực tiếp cho nhân viên khi thanh toán.",
-        scope: "Toàn bộ chuỗi Co.opSmile",
-        kpi: "100% Ấn phẩm bàn giao trước deadline 2 ngày, không lỗi thông tin giá",
-        vendor: "Nhãn hàng FMCG xuất hiện trang bìa & trang nhất"
+        desc: "Designed an A4 POSM sheet setting out the promotion mechanics, placed at the checkout counter as a tool for staff to explain the offer at the point of payment.",
+        scope: "Across the Co.opSmile chain",
+        kpi: "100% delivered two days ahead of deadline, with no pricing errors",
+        vendor: "FMCG brands featured on cover and front page"
     },
     p4: {
         title: "53×80cm Shopping Guide Poster",
         category: "POSM & Key Visual",
         image: "assets/images/posm/poster_a4_2.jpg",
-        desc: "Thiết kế poster 53×80cm theo từng kỳ cẩm nang mua sắm với danh mục hơn 20 sản phẩm giảm giá, trưng bày dán kính trước cửa hàng.",
-        scope: "Chuỗi cửa hàng tiện lợi Cheers",
-        kpi: "Góp phần tăng 18% lượng khách ghé thăm ngẫu hứng (Walk-in traffic)",
-        vendor: "Bộ phận Marketing nội bộ"
+        desc: "Designed a 53×80cm poster for each shopping-guide cycle, listing 20+ discounted products and displayed on the storefront glass.",
+        scope: "Cheers convenience store chain",
+        kpi: "Contributed to an 18% lift in walk-in traffic",
+        vendor: "In-house Marketing team"
     },
     p5: {
-        title: "Tích Điểm Đổi Quà Thương Hiệu Dutch Lady",
-        category: "Truyền Thông Chiến Dịch Nhãn Hàng & CRM",
+        title: "Dutch Lady Points Redemption Programme",
+        category: "Brand Campaign Communications & CRM",
         image: "assets/images/social/dutch_lady.jpg",
-        desc: "Thiết kế banner và truyền thông chương trình Mua Sữa Tích Điểm Đổi Quà của nhãn Dutch Lady triển khai tại chuỗi, trên Fanpage và nhóm Zalo.",
-        scope: "Khách hàng thành viên (KHTV)",
-        kpi: "Tăng 35% doanh số ngành hàng Sữa trong tháng triển khai",
+        desc: "Designed banners and ran communications for Dutch Lady's buy-milk-collect-points programme as deployed across the chain, on Facebook and Zalo groups.",
+        scope: "Membership cardholders",
+        kpi: "35% increase in dairy category sales during the campaign month",
         vendor: "FrieslandCampina Vietnam (Dutch Lady)"
     },
     p6: {
-        title: "CTKM Giải Nhiệt: Dừa Tươi Mua 1 Tặng 1",
+        title: "Summer Refresh: Fresh Coconut Buy One Get One",
         category: "Social Media Campaign & Digital Banner",
         image: "assets/images/social/dua_1tang1.jpg",
-        desc: "Thiết kế banner truyền thông chiến dịch Mua 1 Tặng 1 Nước Dừa Tươi nhân dịp nắng nóng đỉnh điểm mùa hè. Chạy truyền thông trên Facebook Fanpage và nhóm Zalo Cư Dân.",
-        scope: "Hệ thống cửa hàng tiện lợi Cheers",
-        kpi: "Đẩy mạnh sản lượng bán nước dừa tươi trong cao điểm nắng nóng",
-        vendor: "Nhà Cung Cấp Nông Sản Sạch"
+        desc: "Designed campaign banners for a buy-one-get-one fresh coconut water offer at the peak of the summer heat, promoted on the Facebook page and resident Zalo groups.",
+        scope: "Cheers convenience store network",
+        kpi: "Drove fresh coconut water volume through the summer peak",
+        vendor: "Fresh produce supplier"
     },
     p7: {
-        title: "Double Stamp Collection Programme Đổi Quà",
+        title: "Double Stamp Collection Programme",
         category: "Loyalty Program & CRM Boost",
         image: "assets/images/social/x2_tem.jpg",
-        desc: "Chiến dịch kích cầu mua sắm nhân dịp sinh nhật chuỗi Cheers. Nhân đôi điểm tem tích lũy cho khách hàng mua sắm hóa đơn từ 50k.",
-        scope: "Khách hàng mua sắm tại chuỗi Cheers",
-        kpi: "Tăng 25% giá trị hóa đơn bình thường (Basket Size)",
-        vendor: "Đội ngũ Loyalty nội bộ"
+        desc: "A demand-driving campaign for the Cheers chain anniversary, doubling collection stamps for customers with receipts from VND 50,000.",
+        scope: "Shoppers across the Cheers chain",
+        kpi: "25% increase in average basket size",
+        vendor: "In-house Loyalty team"
     },
     p10: {
         title: "Store Opening Leaflet",
-        category: "Ấn Phẩm Sự Kiện Khai Trương",
+        category: "Store Opening Event Collateral",
         image: "assets/images/posm/torroi_khaitruong.jpg",
-        desc: "Tờ rơi khổ A5 gồm 4 trang, phát trực tiếp tại sự kiện khai trương. Trang bìa giới thiệu các chương trình khuyến mãi diễn ra tại sự kiện; các trang trong là danh mục sản phẩm ưu đãi và giảm giá chỉ áp dụng trong tuần lễ khai trương.",
-        scope: "Phát tại điểm bán trong tuần lễ khai trương",
-        kpi: "4 trang khổ A5, phát hành đúng ngày khai trương",
-        vendor: "Bộ phận Marketing nội bộ"
+        desc: "A four-page A5 leaflet handed out at the opening event. The cover introduces the promotions running on the day, while the inside pages list the discounted products available only during opening week.",
+        scope: "Distributed in store during opening week",
+        kpi: "Four A5 pages, released on opening day as scheduled",
+        vendor: "In-house Marketing team"
     },
     p9: {
         title: "Shopping Guide Booklet (A4)",
-        category: "POSM & Quảng Cáo In Ấn",
+        category: "POSM & Print Advertising",
         image: "assets/images/posm/cnms_01.jpg",
-        desc: "Cuốn A4 phát hành theo từng kỳ khuyến mãi: trang bìa chủ đề, các trang danh mục sản phẩm giảm giá và trang thông tin đặt hàng giao tận nơi. Thiết kế và chuẩn hóa toàn bộ theo tiêu chuẩn thương hiệu.",
-        scope: "Toàn bộ chuỗi Co.opSmile",
-        kpi: "5 pages per cycle, bàn giao đúng hạn trước ngày khởi động chương trình",
-        vendor: "Bộ phận Marketing nội bộ"
+        desc: "An A4 booklet issued each promotion cycle: a themed cover, product listing pages and a page covering home delivery ordering. Designed and standardised throughout to brand guidelines.",
+        scope: "Across the Co.opSmile chain",
+        kpi: "Five pages per cycle, delivered on time ahead of each launch",
+        vendor: "In-house Marketing team"
     },
     p8: {
-        title: "Truyền Thông Ưu Đãi Hằng Tháng Từ Đối Tác Nền Tảng",
+        title: "Monthly Partner Platform Offer Communications",
         category: "Social Media & Promo Communication",
         image: "assets/images/social/online_promo.jpg",
-        desc: "Các đối tác như ShopeeFood, GrabMart... có chương trình ưu đãi hằng tháng dành riêng cho chuỗi. Tôi thiết kế bài đăng và triển khai truyền thông đến khách hàng qua Fanpage và nhóm Zalo cư dân.",
-        scope: "Fanpage Cheers, Co.opSmile & nhóm Zalo cư dân",
-        kpi: "Bài truyền thông phủ đều mỗi kỳ ưu đãi hằng tháng",
-        vendor: "Phối hợp bộ phận phụ trách nền tảng giao hàng"
+        desc: "Partners such as ShopeeFood and GrabMart run monthly offers reserved for our chains. I design the posts and run the communications to customers via Facebook and resident Zalo groups.",
+        scope: "Cheers and Co.opSmile pages & resident Zalo groups",
+        kpi: "Consistent post coverage for every monthly offer cycle",
+        vendor: "In coordination with the delivery platform team"
     }
 };
 
