@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initDashboardTabs();
     initPortfolioFilter();
     initLightboxModal();
+    initScrollReveal();
+    initImageViewer();
 });
 
 /* ==========================================================================
@@ -313,3 +315,85 @@ function formatVND(amount) {
     return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
 }
 
+
+
+/* ==========================================================================
+   8. SCROLL REVEAL — các mục hiện dần khi cuộn tới
+   ========================================================================== */
+function initScrollReveal() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const targets = document.querySelectorAll(
+        '.about-card, .exp-card, .dash-tabs, .dashboard-content, ' +
+        '.cs-article, .portfolio-card, .booklet-block, .timeline-item, .contact-info-card'
+    );
+    targets.forEach(el => el.classList.add('reveal'));
+
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (!entry.isIntersecting) return;
+            // so le nhẹ để nhóm phần tử không bật lên cùng lúc
+            setTimeout(() => entry.target.classList.add('revealed'), Math.min(i, 5) * 70);
+            io.unobserve(entry.target);
+        });
+    }, { rootMargin: '0px 0px -50px 0px', threshold: 0.08 });
+
+    targets.forEach(el => io.observe(el));
+
+    // Lưới dự án bị lọc lại thì phần tử mới phải hiện ngay
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.filter-btn')) {
+            document.querySelectorAll('.portfolio-card.reveal').forEach(c => c.classList.add('revealed'));
+        }
+    });
+}
+
+/* ==========================================================================
+   9. IMAGE VIEWER — bấm vào ấn phẩm để xem cỡ lớn
+   ========================================================================== */
+function initImageViewer() {
+    const imgs = document.querySelectorAll(
+        '.cs-figure img, .cs-gallery img, .booklet-block img, .dashboard-img'
+    );
+    if (!imgs.length) return;
+
+    const view = document.createElement('div');
+    view.className = 'imgview';
+    view.innerHTML =
+        '<button class="imgview-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>' +
+        '<img alt=""><div class="imgview-cap"></div>';
+    document.body.appendChild(view);
+
+    const big = view.querySelector('img');
+    const cap = view.querySelector('.imgview-cap');
+
+    function open(src, text) {
+        big.src = src;
+        big.alt = text || '';
+        cap.textContent = text || '';
+        cap.style.display = text ? '' : 'none';
+        view.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+        view.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    imgs.forEach(img => {
+        img.classList.add('zoomable');
+        img.setAttribute('role', 'button');
+        img.setAttribute('tabindex', '0');
+        const label = img.closest('figure')?.querySelector('figcaption')?.innerText.trim() || img.alt;
+        img.addEventListener('click', () => open(img.currentSrc || img.src, label));
+        img.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(img.currentSrc || img.src, label); }
+        });
+    });
+
+    view.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && view.classList.contains('active')) close();
+    });
+}

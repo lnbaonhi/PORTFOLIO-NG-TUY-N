@@ -2821,3 +2821,327 @@ button:focus-visible {
 @media (max-width: 768px) {
     .lang-toggle { min-width: 36px; height: 36px; padding: 0 9px; font-size: 0.74rem; margin-right: 6px; }
 }
+
+/* ══════════════════════════════════════════════════════════
+   CHUYỂN ĐỘNG & XEM ẢNH CỠ LỚN
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Chip kỹ năng trôi nhẹ, so le nhau ─────────────────── */
+@keyframes chipDrift {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-7px); }
+}
+
+.skill-chip {
+    animation: chipDrift 3.2s ease-in-out infinite alternate;
+}
+.skill-chip:nth-child(2) { animation-delay: -0.8s; }
+.skill-chip:nth-child(3) { animation-delay: -1.6s; }
+.skill-chip:nth-child(4) { animation-delay: -2.4s; }
+
+.skill-chip:hover { animation-play-state: paused; }
+
+/* ── Hiện dần khi cuộn tới ──────────────────────────────── */
+.reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── Ảnh bấm được để xem cỡ lớn ─────────────────────────── */
+.zoomable {
+    cursor: zoom-in;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.zoomable:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-glass);
+}
+
+.imgview {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(12, 10, 18, 0.92);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-smooth), visibility var(--transition-smooth);
+}
+
+.imgview.active { opacity: 1; visibility: visible; }
+
+.imgview img {
+    max-width: 100%;
+    max-height: 88vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    transform: scale(0.96);
+    transition: transform var(--transition-smooth);
+}
+
+.imgview.active img { transform: scale(1); }
+
+.imgview-cap {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    max-width: 76ch;
+    padding: 9px 18px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 0, 0, 0.55);
+    color: #F6F2FA;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.imgview-close {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.imgview-close:hover { background: rgba(255, 255, 255, 0.28); }
+
+/* ── Thẻ cào to hơn cho thấy rõ thiết kế ────────────────── */
+.cs-gallery { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+@media (max-width: 768px) {
+    .imgview { padding: 16px; }
+    .imgview img { max-height: 78vh; }
+    .imgview-cap { font-size: 0.78rem; bottom: 10px; }
+}
+
+/* ── Tôn trọng người tắt hiệu ứng ───────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .skill-chip { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .zoomable:hover { transform: none; }
+    .imgview, .imgview img { transition: none; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   MOCKUP THIẾT BỊ & ĐỘ SÂU NHIỀU LỚP
+   ══════════════════════════════════════════════════════════ */
+
+/* Trả lưới thẻ cào về khổ cũ — không phóng to ảnh */
+.cs-gallery { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+
+/* ── Khung điện thoại ────────────────────────────────────── */
+.mockup-phone {
+    position: relative;
+    max-width: 300px;
+    padding: 11px 9px;
+    background: linear-gradient(158deg, #322c4a 0%, #1a1626 55%, #100d18 100%);
+    border-radius: 36px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.18),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 3px 6px rgba(27, 23, 48, 0.16),
+        0 14px 28px -8px rgba(27, 23, 48, 0.30),
+        0 34px 60px -18px rgba(27, 23, 48, 0.42);
+}
+
+/* Tai thỏ */
+.mockup-phone::before {
+    content: '';
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 72px;
+    height: 19px;
+    border-radius: 12px;
+    background: #0d0b13;
+    z-index: 2;
+}
+
+/* Ánh sáng phản chiếu chéo trên mặt kính */
+.mockup-phone::after {
+    content: '';
+    position: absolute;
+    inset: 11px 9px;
+    border-radius: 27px;
+    background: linear-gradient(122deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 42%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+.mockup-phone img {
+    border: none !important;
+    border-radius: 27px !important;
+    display: block;
+    width: 100%;
+}
+
+.mockup-phone figcaption { margin-top: 16px; }
+
+/* ── Khung cửa sổ trình duyệt ────────────────────────────── */
+.mockup-browser {
+    border-radius: 14px;
+    background: var(--bg-card);
+    box-shadow:
+        0 0 0 1px var(--border-color),
+        0 3px 6px rgba(27, 23, 48, 0.10),
+        0 16px 32px -10px rgba(27, 23, 48, 0.22),
+        0 38px 64px -22px rgba(27, 23, 48, 0.30);
+    overflow: hidden;
+}
+
+/* Thanh tiêu đề với ba chấm */
+.mockup-browser::before {
+    content: '';
+    display: block;
+    height: 34px;
+    background:
+        radial-gradient(circle 5px at 20px 17px, #ED6A5E 98%, transparent 100%),
+        radial-gradient(circle 5px at 40px 17px, #F5BF4F 98%, transparent 100%),
+        radial-gradient(circle 5px at 60px 17px, #61C554 98%, transparent 100%),
+        linear-gradient(var(--bg-inset), var(--bg-inset));
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mockup-browser img {
+    border: none !important;
+    border-radius: 0 !important;
+    display: block;
+    width: 100%;
+}
+
+.mockup-browser figcaption {
+    padding: 0 4px;
+    margin-top: 14px;
+}
+
+/* Trong khung mockup, hover phóng nhẹ áp lên cả khung chứ không riêng ảnh */
+.mockup-phone .zoomable:hover,
+.mockup-browser .zoomable:hover { transform: none; box-shadow: none; }
+
+.mockup-phone:hover,
+.mockup-browser:hover { transform: translateY(-3px); }
+
+.mockup-phone,
+.mockup-browser { transition: transform var(--transition-smooth); }
+
+/* ── Độ sâu nhiều lớp cho thẻ ────────────────────────────── */
+.portfolio-card,
+.exp-card,
+.cs-kpi,
+.about-card,
+.timeline-content {
+    box-shadow:
+        0 1px 2px rgba(27, 23, 48, 0.05),
+        0 4px 10px -3px rgba(27, 23, 48, 0.07),
+        0 14px 26px -12px rgba(27, 23, 48, 0.10);
+}
+
+.portfolio-card:hover,
+.exp-card:hover,
+.cs-kpi:hover {
+    box-shadow:
+        0 2px 4px rgba(27, 23, 48, 0.07),
+        0 10px 22px -6px rgba(27, 23, 48, 0.12),
+        0 28px 50px -18px rgba(27, 23, 48, 0.18);
+}
+
+[data-theme="dark"] .portfolio-card,
+[data-theme="dark"] .exp-card,
+[data-theme="dark"] .cs-kpi,
+[data-theme="dark"] .about-card,
+[data-theme="dark"] .timeline-content {
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.3),
+        0 6px 14px -4px rgba(0, 0, 0, 0.4),
+        0 18px 34px -14px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .mockup-browser {
+    box-shadow:
+        0 0 0 1px var(--border-color),
+        0 6px 14px rgba(0, 0, 0, 0.4),
+        0 24px 46px -16px rgba(0, 0, 0, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mockup-phone:hover,
+    .mockup-browser:hover { transform: none; }
+}
+
+@media (max-width: 768px) {
+    .mockup-phone { max-width: 240px; margin-inline: auto; }
+    .mockup-browser::before { height: 28px; background-size: auto; }
+}
+
+/* Khung điện thoại phải ôm sát ảnh, không bị .cs-split ép rộng 100% */
+.cs-split > .cs-figure-tall.mockup-phone,
+.cs-block > .cs-figure.mockup-phone,
+.mockup-phone {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.cs-split > .cs-figure-tall.mockup-phone img,
+.mockup-phone img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 54vh;
+}
+
+@media (max-width: 768px) {
+    .mockup-phone img { max-height: 46vh; }
+}
+
+/* Khung mockup là div bọc riêng ảnh — chú thích nằm ngoài khung */
+.cs-figure .mockup-phone   { width: fit-content; max-width: 100%; margin: 0 auto; }
+.cs-figure .mockup-browser { width: 100%; }
+
+.cs-figure .mockup-phone img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 52vh;
+}
+
+.cs-figure .mockup-browser img { width: 100%; height: auto; }
+
+/* chú thích trở lại màu chữ bình thường, canh giữa dưới khung */
+.cs-figure .mockup-phone + figcaption,
+.cs-figure .mockup-browser + figcaption {
+    color: var(--text-muted);
+    margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+    .cs-figure .mockup-phone img { max-height: 44vh; }
+}
