@@ -3145,3 +3145,189 @@ button:focus-visible {
 @media (max-width: 768px) {
     .cs-figure .mockup-phone img { max-height: 44vh; }
 }
+
+/* ══════════════════════════════════════════════════════════
+   MOCKUP ẤN PHẨM IN — mức tiết chế
+   Nguyên tắc: gợi ra chất liệu giấy bằng bóng đổ và độ nghiêng
+   rất nhỏ (≤2°), tuyệt đối không bóp méo chữ trên thiết kế.
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Tờ giấy in A4 ──────────────────────────────────────── */
+.mockup-paper {
+    display: block;
+    background: #fff;
+    padding: 7px;
+    border-radius: 4px;
+    box-shadow:
+        0 0 0 1px rgba(27, 23, 48, 0.05),
+        0 1px 2px rgba(27, 23, 48, 0.06),
+        0 8px 16px -6px rgba(27, 23, 48, 0.12),
+        0 22px 36px -18px rgba(27, 23, 48, 0.18);
+    transform: rotate(-0.7deg);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.mockup-paper:hover {
+    transform: rotate(0deg) translateY(-4px);
+    box-shadow:
+        0 0 0 1px rgba(27, 23, 48, 0.05),
+        0 2px 4px rgba(27, 23, 48, 0.08),
+        0 16px 30px -8px rgba(27, 23, 48, 0.16),
+        0 36px 56px -24px rgba(27, 23, 48, 0.22);
+}
+
+.mockup-paper img,
+.mockup-paper .dashboard-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+}
+
+.mockup-paper .zoomable:hover { transform: none; box-shadow: none; }
+
+/* ── Xấp thẻ cào: mỗi thẻ lệch một góc khác nhau ─────────── */
+.mockup-cards figure {
+    transition: transform var(--transition-smooth), z-index 0s;
+    transform: rotate(-1.5deg);
+}
+.mockup-cards figure:nth-child(2) { transform: rotate(1.3deg); }
+.mockup-cards figure:nth-child(3) { transform: rotate(-0.8deg); }
+.mockup-cards figure:nth-child(4) { transform: rotate(1.8deg); }
+
+.mockup-cards figure:hover {
+    transform: rotate(0deg) translateY(-5px);
+    position: relative;
+    z-index: 3;
+}
+
+.mockup-cards img {
+    border-radius: 9px !important;
+    border: 1px solid rgba(27, 23, 48, 0.07) !important;
+    box-shadow:
+        0 1px 2px rgba(27, 23, 48, 0.07),
+        0 6px 14px -5px rgba(27, 23, 48, 0.16);
+}
+
+.mockup-cards img:hover { transform: none !important; }
+
+/* ── Trang cẩm nang xếp lớp như cuốn sách ────────────────── */
+.mockup-pages figure {
+    position: relative;
+    transition: transform var(--transition-smooth);
+}
+
+/* Hai lớp giấy nhô ra sau mỗi trang */
+.mockup-pages figure::before,
+.mockup-pages figure::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(27, 23, 48, 0.10);
+    z-index: -1;
+}
+.mockup-pages figure::before { transform: translate(3px, 3px) rotate(0.8deg); }
+.mockup-pages figure::after  { transform: translate(6px, 6px) rotate(1.6deg); }
+
+.mockup-pages img {
+    position: relative;
+    z-index: 1;
+    border-radius: 4px !important;
+    border: 1px solid rgba(27, 23, 48, 0.08) !important;
+    box-shadow: 0 2px 6px rgba(27, 23, 48, 0.10) !important;
+}
+
+.mockup-pages figure:hover { transform: translateY(-5px); }
+.mockup-pages img:hover { transform: none !important; }
+
+/* ── Hai poster A4 của case đối chứng ────────────────────── */
+.mockup-papers figure { transition: transform var(--transition-smooth); }
+.mockup-papers figure:nth-child(1) { transform: rotate(-1deg); }
+.mockup-papers figure:nth-child(2) { transform: rotate(1deg); }
+.mockup-papers figure:hover { transform: rotate(0deg) translateY(-4px); }
+
+.mockup-papers img {
+    border-radius: 4px !important;
+    border: 1px solid rgba(27, 23, 48, 0.07) !important;
+    box-shadow:
+        0 1px 2px rgba(27, 23, 48, 0.06),
+        0 10px 20px -8px rgba(27, 23, 48, 0.14) !important;
+}
+.mockup-papers img:hover { transform: none !important; }
+
+/* ── Khung bài đăng mạng xã hội cho banner vuông ─────────── */
+.mockup-social {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+}
+
+.msocial-bar {
+    flex: 0 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-inset);
+}
+
+.msocial-ava {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    flex-shrink: 0;
+}
+
+/* Hai vạch xám giả lập tên trang và mốc thời gian */
+.msocial-meta {
+    flex: 1;
+    height: 15px;
+    background:
+        linear-gradient(var(--border-strong), var(--border-strong)) left 2px / 62px 5px no-repeat,
+        linear-gradient(var(--border-color), var(--border-color)) left 10px / 34px 4px no-repeat;
+}
+
+.mockup-social img {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    object-fit: contain;
+    background: var(--bg-inset);
+}
+
+/* ── Chế độ tối ─────────────────────────────────────────── */
+[data-theme="dark"] .mockup-paper,
+[data-theme="dark"] .mockup-pages figure::before,
+[data-theme="dark"] .mockup-pages figure::after { background: #E8E4F0; }
+
+[data-theme="dark"] .mockup-paper {
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.35),
+        0 14px 28px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Tôn trọng người tắt hiệu ứng ───────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .mockup-paper,
+    .mockup-cards figure,
+    .mockup-papers figure { transform: none; transition: none; }
+    .mockup-paper:hover,
+    .mockup-cards figure:hover,
+    .mockup-papers figure:hover,
+    .mockup-pages figure:hover { transform: none; }
+}
+
+@media (max-width: 768px) {
+    .mockup-paper { padding: 5px; transform: none; }
+    .mockup-cards figure,
+    .mockup-papers figure { transform: none; }
+    .mockup-pages figure::before,
+    .mockup-pages figure::after { display: none; }
+}
